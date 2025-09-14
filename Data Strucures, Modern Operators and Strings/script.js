@@ -224,323 +224,323 @@ const books = [
   },
 ];
 // Assignment 1
-// const [firstBook, secondBook] = books;
-// console.log(firstBook);
-// console.log(secondBook);
-// const [, , thirdBook] = books;
-// console.log(thirdBook);
+const [firstBook, secondBook] = books;
+console.log(firstBook);
+console.log(secondBook);
+const [, , thirdBook] = books;
+console.log(thirdBook);
 
-// const ratings = [
-//   ["rating", 4.19],
-//   ["ratingsCount", 144584],
-// ];
-// const [[, rating], [, ratingCount]] = ratings;
-// console.log(rating);
-// console.log(ratingCount);
+const ratings = [
+  ["rating", 4.19],
+  ["ratingsCount", 144584],
+];
+const [[, rating], [, ratingCount]] = ratings;
+console.log(rating);
+console.log(ratingCount);
 
-// const ratingStars = [63405, 1808];
-// const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
-// console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
-/////////////////////////////////////////////////
+const ratingStars = [63405, 1808];
+const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
+///////////////////////////////////////////////
 // Assignment 2
-// const { title, author, ISBN } = books[0];
-// console.log(title, author, ISBN);
+const { title, author, ISBN } = books[0];
+console.log(title, author, ISBN);
 
-// const { keywords: tags } = books[0];
-// console.log(tags);
+const { keywords: tags } = books[0];
+console.log(tags);
 
-// const { language, programmingLanguage = "unKnown" } = books[6];
-// console.log(language, programmingLanguage);
+const { language, programmingLanguage = "unKnown" } = books[6];
+console.log(language, programmingLanguage);
 
-// let bookTitle = "unknown";
-// let bookAuthor = "unknown";
-// ({ title: bookTitle, author: bookAuthor } = books[0]);
+let bookTitle = "unknown";
+let bookAuthor = "unknown";
+({ title: bookTitle, author: bookAuthor } = books[0]);
 
-// const {
-//   thirdParty: {
-//     goodreads: { rating: bookRating },
-//   },
-// } = books[0];
-// console.log(bookRating);
+const {
+  thirdParty: {
+    goodreads: { rating: bookRating },
+  },
+} = books[0];
+console.log(bookRating);
 
-// const printBookInfo = ({ title, author, year = "year unKnown" }) => {
-//   console.log(`${title} by ${author}, ${year}`);
-// };
-// printBookInfo({
-//   title: "Algorithms",
-//   author: "Robert Sedgewick",
-//   year: "2011",
-// });
-// printBookInfo({
-//   title: "Algorithms",
-//   author: "Robert Sedgewick",
-// });
-/////////////////////////////////////////////////
+const printBookInfo = ({ title, author, year = "year unKnown" }) => {
+  console.log(`${title} by ${author}, ${year}`);
+};
+printBookInfo({
+  title: "Algorithms",
+  author: "Robert Sedgewick",
+  year: "2011",
+});
+printBookInfo({
+  title: "Algorithms",
+  author: "Robert Sedgewick",
+});
+///////////////////////////////////////////////
 // Assignment 3
-// const bookAuthors = [...books[0].author, ...books[1].author];
-// console.log(bookAuthors);
+const bookAuthors = [...books[0].author, ...books[1].author];
+console.log(bookAuthors);
 
-// const spellWord = (str) => {
-//   console.log(...str);
-// };
-// spellWord("Javascript");
-/////////////////////////////////////////////////
+const spellWord = (str) => {
+  console.log(...str);
+};
+spellWord("Javascript");
+///////////////////////////////////////////////
 // Assignment 4
-// const [mainKeyword, ...rest] = books[0].keywords;
-// console.log(mainKeyword, rest);
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
 
-// const { publisher: bookPublisher, ...restOfTheBook } = books[1];
-// console.log(bookPublisher, restOfTheBook);
+const { publisher: bookPublisher, ...restOfTheBook } = books[1];
+console.log(bookPublisher, restOfTheBook);
 
-// const printBookAuthorsCount = (title, ...authors) => {
-//   console.log(`The book "${title}" has ${authors.length} authors`);
-// };
-// printBookAuthorsCount("Algorithms", "Robert Sedgewick", "Kevin Wayne");
-/////////////////////////////////////////////////
+const printBookAuthorsCount = (title, ...authors) => {
+  console.log(`The book "${title}" has ${authors.length} authors`);
+};
+printBookAuthorsCount("Algorithms", "Robert Sedgewick", "Kevin Wayne");
+///////////////////////////////////////////////
 // Assignment 5
-// const hasExamplesInJava = (book) => {
-//   console.log(book.programmingLanguage === "Java" || "no data available");
-// };
-// hasExamplesInJava(books[0]);
-// hasExamplesInJava(books[1]);
+const hasExamplesInJava = (book) => {
+  console.log(book.programmingLanguage === "Java" || "no data available");
+};
+hasExamplesInJava(books[0]);
+hasExamplesInJava(books[1]);
 
-// for (let i = 0; i < books.length; i++) {
-//   books[i].onlineContent &&
-//     console.log(`"${books[i].title}" provides online content`);
-// }
-/////////////////////////////////////////////////
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent &&
+    console.log(`"${books[i].title}" provides online content`);
+}
+///////////////////////////////////////////////
 // Assignment 6
-// for (let i = 0; i < books.length; i++) {
-//   books[i].onlineContent ??
-//     console.log(
-//       `"${books[i].title}" provides no data about its online content`
-//     );
-// }
-/////////////////////////////////////////////////
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent ??
+    console.log(
+      `"${books[i].title}" provides no data about its online content`
+    );
+}
+///////////////////////////////////////////////
 // Assignment 7
-// for (let i = 0; i < books.length; i++) {
-//   console.log((books[i].edition ||= 1));
-// }
+for (let i = 0; i < books.length; i++) {
+  console.log((books[i].edition ||= 1));
+}
 
-// for (let i = 0; i < books.length; i++) {
-//   console.log(
-//     (books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2))
-//   );
-// }
-/////////////////////////////////////////////////
+for (let i = 0; i < books.length; i++) {
+  console.log(
+    (books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2))
+  );
+}
+///////////////////////////////////////////////
 // Assignment 8
-// let pageSum = 0;
-// for (let sum of books) {
-//   pageSum += sum.pages;
-// }
-// console.log(pageSum);
+let pageSum = 0;
+for (let sum of books) {
+  pageSum += sum.pages;
+}
+console.log(pageSum);
 
-// const allAuthors = [];
-// for (let book of books) {
-//   if (typeof book.author === "string") allAuthors.push(book.author);
-//   else {
-//     for (let author of book.author) {
-//       allAuthors.push(author);
-//     }
-//   }
-// }
-// console.log(allAuthors);
+const allAuthors = [];
+for (let book of books) {
+  if (typeof book.author === "string") allAuthors.push(book.author);
+  else {
+    for (let author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+console.log(allAuthors);
 
-// for (const [index, author] of allAuthors.entries()) {
-//   console.log(`${index + 1}. ${author}`);
-// }
-/////////////////////////////////////////////////
+for (const [index, author] of allAuthors.entries()) {
+  console.log(`${index + 1}. ${author}`);
+}
+///////////////////////////////////////////////
 // Assignment 9
-// const bookData = [
-//   ["title", "Computer Networking: A Top-Down Approach"],
-//   ["author", ["James F. Kurose", "Keith W. Ross"]],
-//   ["publisher", "Addison Wesley"],
-// ];
-// const newBook = {
-//   [bookData[0][0]]: bookData[0][1],
-//   [bookData[1][0]]: bookData[1][1],
-//   [bookData[2][0]]: bookData[2][1],
-// };
-// console.log(newBook);
+const bookData = [
+  ["title", "Computer Networking: A Top-Down Approach"],
+  ["author", ["James F. Kurose", "Keith W. Ross"]],
+  ["publisher", "Addison Wesley"],
+];
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+};
+console.log(newBook);
 
-// const pages = 880;
+const pages = 880;
 
-// const newBook2 = {
-//   title: "The C Programming Language",
-//   author: ["Brian W. Kernighan", "Dennis M. Ritchie"],
-//   pages,
-// };
-// console.log(newBook2);
-/////////////////////////////////////////////////
+const newBook2 = {
+  title: "The C Programming Language",
+  author: ["Brian W. Kernighan", "Dennis M. Ritchie"],
+  pages,
+};
+console.log(newBook2);
+///////////////////////////////////////////////
 // Assignment 10
-// const getFirstKeyword = (book) => {
-//   console.log(book.keywords?.[0]);
-// };
-// getFirstKeyword(books[0]);
-// getFirstKeyword(newBook2);
-/////////////////////////////////////////////////
+const getFirstKeyword = (book) => {
+  console.log(book.keywords?.[0]);
+};
+getFirstKeyword(books[0]);
+getFirstKeyword(newBook2);
+///////////////////////////////////////////////
 // Assignment 11
-// const entries = [];
-// for (const key of Object.keys(books[0].thirdParty.goodreads)) {
-//   entries.push([key]);
-// }
-// console.log(entries);
+const entries = [];
+for (const key of Object.keys(books[0].thirdParty.goodreads)) {
+  entries.push([key]);
+}
+console.log(entries);
 
-// for (const [index, value] of Object.values(
-//   books[0].thirdParty.goodreads
-// ).entries()) {
-//   entries[index].push(value);
-// }
-// console.log(entries);
+for (const [index, value] of Object.values(
+  books[0].thirdParty.goodreads
+).entries()) {
+  entries[index].push(value);
+}
+console.log(entries);
 
-// const entries2 = Object.entries(books[0].thirdParty.goodreads);
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
-// console.log(entries);
-// console.log(entries2);
-/////////////////////////////////////////////////
+console.log(entries);
+console.log(entries2);
+///////////////////////////////////////////////
 // Assignment 12
-// const allKeywords = [];
-// for (const book of books) {
-//   allKeywords.push(...book.keywords);
-// }
-// console.log(allKeywords);
+const allKeywords = [];
+for (const book of books) {
+  allKeywords.push(...book.keywords);
+}
+console.log(allKeywords);
 
-// const uniqueKeywords = new Set(allKeywords);
-// console.log(uniqueKeywords);
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
 
-// uniqueKeywords.add("coding");
-// uniqueKeywords.add("science");
-// console.log(uniqueKeywords);
+uniqueKeywords.add("coding");
+uniqueKeywords.add("science");
+console.log(uniqueKeywords);
 
-// uniqueKeywords.delete("business");
-// console.log(uniqueKeywords);
+uniqueKeywords.delete("business");
+console.log(uniqueKeywords);
 
-// const uniqueKeywordsArr = [...uniqueKeywords];
-// console.log(uniqueKeywordsArr);
+const uniqueKeywordsArr = [...uniqueKeywords];
+console.log(uniqueKeywordsArr);
 
-// uniqueKeywords.clear();
-// console.log(uniqueKeywordsArr);
-/////////////////////////////////////////////////
+uniqueKeywords.clear();
+console.log(uniqueKeywordsArr);
+///////////////////////////////////////////////
 // Assignment 13
-// const bookMap = new Map([
-//   ["title", "Clean Code"],
-//   ["author", "Robert C. Martin"],
-// ]);
-// console.log(bookMap);
+const bookMap = new Map([
+  ["title", "Clean Code"],
+  ["author", "Robert C. Martin"],
+]);
+console.log(bookMap);
 
-// bookMap.set("pages", 464);
-// console.log(bookMap);
+bookMap.set("pages", 464);
+console.log(bookMap);
 
-// console.log(`"${bookMap.get("title")}" by ${bookMap.get("author")}`);
+console.log(`"${bookMap.get("title")}" by ${bookMap.get("author")}`);
 
-// console.log(bookMap.size);
+console.log(bookMap.size);
 
-// if (bookMap.has("author")) console.log("The author is known");
-/////////////////////////////////////////////////
+if (bookMap.has("author")) console.log("The author is known");
+///////////////////////////////////////////////
 // Assignment 14
-// const firstBookMap = new Map(Object.entries(books[0]));
-// console.log(firstBookMap);
+const firstBookMap = new Map(Object.entries(books[0]));
+console.log(firstBookMap);
 
-// for (const [key, value] of firstBookMap) {
-//   if (typeof value === "number") console.log(key);
-// }
-/////////////////////////////////////////////////
+for (const [key, value] of firstBookMap) {
+  if (typeof value === "number") console.log(key);
+}
+///////////////////////////////////////////////
 // Assignment 15
-// console.log(
-//   books[0].ISBN["6"],
-//   books[0].ISBN["4"],
-//   books[0].ISBN["9"],
-//   books[0].ISBN[8]
-// );
+console.log(
+  books[0].ISBN["6"],
+  books[0].ISBN["4"],
+  books[0].ISBN["9"],
+  books[0].ISBN[8]
+);
 
-// const quote =
-//   "A computer once beat me at chess, but it was no match for me at kick boxing";
-// console.log(quote.indexOf("chess"));
+const quote =
+  "A computer once beat me at chess, but it was no match for me at kick boxing";
+console.log(quote.indexOf("chess"));
 
-// console.log(quote.slice(quote.lastIndexOf(" ") + 1));
+console.log(quote.slice(quote.lastIndexOf(" ") + 1));
 
-// function isContributor(author) {
-//   console.log(author.lastIndexOf("(Contributor)") !== -1);
-// }
-// isContributor("Julie Sussman (Contributor)");
-// isContributor("Robert Sedgewick");
-/////////////////////////////////////////////////
+function isContributor(author) {
+  console.log(author.lastIndexOf("(Contributor)") !== -1);
+}
+isContributor("Julie Sussman (Contributor)");
+isContributor("Robert Sedgewick");
+///////////////////////////////////////////////
 // Assignment 16
-// function normalizeAuthorName(author) {
-//   author = author.trim();
-//   const firstName = author.slice(0, author.indexOf(" "));
+function normalizeAuthorName(author) {
+  author = author.trim();
+  const firstName = author.slice(0, author.indexOf(" "));
 
-//   let lastName = "";
-//   if (author.indexOf(" ") === author.lastIndexOf(" ")) {
-//     lastName = author.slice(author.indexOf(" ") + 1, author.length);
-//   } else {
-//     lastName = author.slice(author.indexOf(" ") + 1, author.lastIndexOf(" "));
-//   }
+  let lastName = "";
+  if (author.indexOf(" ") === author.lastIndexOf(" ")) {
+    lastName = author.slice(author.indexOf(" ") + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(" ") + 1, author.lastIndexOf(" "));
+  }
 
-//   const capitalizedFirstName =
-//     firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
-//   const capitalizedLastName =
-//     lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+  const capitalizedFirstName =
+    firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+  const capitalizedLastName =
+    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
 
-//   console.log(capitalizedFirstName + " " + capitalizedLastName);
-// }
-// normalizeAuthorName("  JuliE sussMan (Contributor)");
+  console.log(capitalizedFirstName + " " + capitalizedLastName);
+}
+normalizeAuthorName("  JuliE sussMan (Contributor)");
 
-// const newBookTitle = books[1].title.replace("Programs", "Software");
-// console.log(newBookTitle);
+const newBookTitle = books[1].title.replace("Programs", "Software");
+console.log(newBookTitle);
 
-// function logBookTheme(title) {
-//   title = title.toLowerCase();
+function logBookTheme(title) {
+  title = title.toLowerCase();
 
-//   if (title.startsWith("computer")) {
-//     console.log("This book is about computers");
-//   } else if (title.includes("algorithms") && title.includes("structures")) {
-//     console.log("This book is about algorithms and data structures");
-//   } else if (
-//     (title.endsWith("system") || title.endsWith("systems")) &&
-//     !title.includes("operating")
-//   ) {
-//     console.log(
-//       "This book is about some systems, but definitely not about operating systems"
-//     );
-//   }
-// }
-/////////////////////////////////////////////////
+  if (title.startsWith("computer")) {
+    console.log("This book is about computers");
+  } else if (title.includes("algorithms") && title.includes("structures")) {
+    console.log("This book is about algorithms and data structures");
+  } else if (
+    (title.endsWith("system") || title.endsWith("systems")) &&
+    !title.includes("operating")
+  ) {
+    console.log(
+      "This book is about some systems, but definitely not about operating systems"
+    );
+  }
+}
+///////////////////////////////////////////////
 // Assignment 17
-// const bookCategories =
-//   "science;computing;computer science;algorithms;business;operating systems;networking;electronics";
-// function logBookCategories(str) {
-//   const categories = str.split(";");
+const bookCategories =
+  "science;computing;computer science;algorithms;business;operating systems;networking;electronics";
+function logBookCategories(str) {
+  const categories = str.split(";");
 
-//   for (let category of categories) {
-//     console.log(category);
-//   }
-// }
-// logBookCategories(bookCategories);
+  for (let category of categories) {
+    console.log(category);
+  }
+}
+logBookCategories(bookCategories);
 
-// function getKeywordsAsString(books) {
-//   const keywords = [];
+function getKeywordsAsString(books) {
+  const keywords = [];
 
-//   for (const book of books) {
-//     keywords.push(...book.keywords);
-//   }
+  for (const book of books) {
+    keywords.push(...book.keywords);
+  }
 
-//   const uniqueKeywords = [...new Set(keywords)];
+  const uniqueKeywords = [...new Set(keywords)];
 
-//   console.log(uniqueKeywords.join(";"));
-// }
-// getKeywordsAsString(books);
+  console.log(uniqueKeywords.join(";"));
+}
+getKeywordsAsString(books);
 
-// const bookChapters = [
-//   ["The Basics", 14],
-//   ["Sorting", 254],
-//   ["Searching", 372],
-//   ["Graphs", 526],
-//   ["Strings", 706],
-// ];
-// function logBookChapters(chapters) {
-//   for (const [chapter, pages] of chapters) {
-//     console.log(chapter.padEnd(20, "_") + " " + pages);
-//   }
-// }
-// logBookChapters(bookChapters);
+const bookChapters = [
+  ["The Basics", 14],
+  ["Sorting", 254],
+  ["Searching", 372],
+  ["Graphs", 526],
+  ["Strings", 706],
+];
+function logBookChapters(chapters) {
+  for (const [chapter, pages] of chapters) {
+    console.log(chapter.padEnd(20, "_") + " " + pages);
+  }
+}
+logBookChapters(bookChapters);

@@ -1,4 +1,3 @@
-// JavaScript Fundamentals — Part 1
 // Assignment 1
 const country = "egypt";
 const continent = "africa";
