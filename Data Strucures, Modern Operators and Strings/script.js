@@ -1,4 +1,3 @@
-// Data Strucures, Modern Operators and Strings
 const books = [
   {
     title: "Algorithms",
